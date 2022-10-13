@@ -1,0 +1,24 @@
+
+  .tableContainer{
+    display: flex;
+    margin: 0 auto;
+  }
+  
+.imgDiv{
+    display: inline;
+    border: 2px solid rgb(101, 154, 200);
+    font-size: 17px;
+    margin: 26px;
+}
+.imgDiv p{
+  text-align: center;
+  font-weight: 500;
+  font-family: monospace;
+  display: flex !important;
+}
+
+.addBtn{
+    width: 200px;
+    margin: 20px 0 0 100px;
+    border-radius: 0px !important;
+}

@@ -1,0 +1,78 @@
+input, select, textarea{
+    width: 36rem;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  @media (min-width: 1200px){
+  .h1, h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-right: 20rem;
+  }
+  }
+  
+  
+  
+  
+  /* Style the label to display next to the inputs */
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    margin-left: 6rem;
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+    background-color: blue;
+    color: white;
+    padding: 17px 22px;
+    border: flex;
+    border-radius: 1rem;
+    cursor: pointer;
+    float: center;
+    width: 9rem;
+    margin-left: 20rem;
+    margin-top: 4rem;
+  }
+  
+  /* Style the container */
+  .container {
+    border-radius: 21px;
+    /* background-color: var(--bs-gray-500); */
+    padding: 3rem;
+    width: 54rem;
+    align-items: center;
+    margin-left: 36rem;
+  }
+  
+  /* Floating column for labels: 25% width */
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  /* Floating column for inputs: 75% width */
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
