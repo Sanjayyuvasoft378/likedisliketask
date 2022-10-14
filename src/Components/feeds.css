@@ -1,24 +1,41 @@
-
-  .tableContainer{
-    display: flex;
-    margin: 0 auto;
-  }
-  
-.imgDiv{
-    display: inline;
-    border: 2px solid rgb(101, 154, 200);
-    font-size: 17px;
-    margin: 26px;
+.addBtn {
+  width: 200px;
+  margin: 20px 0 50px 100px;
+  border-radius: 0px !important;
+  /* float: left; */
 }
-.imgDiv p{
+
+.inpField{
+  width: 200px;
+  display: flex;
+  height: 31px;
+}
+
+.commentBtn{
+  width: 100px;
+  height: 31px;
+  border-radius: 0px !important;
+}
+
+/* 
+.imgDiv {
+  float: left !important;
+  margin: 20px 0 0 0;
+  height: 200px;
+  }
+
+.imgDiv img {
+  padding: 5px;
+  border: 2px solid rgb(101, 154, 200);
+  float: left;
+  display: flex;
+}
+
+.imgDiv p {
+  float: left;
   text-align: center;
   font-weight: 500;
   font-family: monospace;
   display: flex !important;
-}
 
-.addBtn{
-    width: 200px;
-    margin: 20px 0 0 100px;
-    border-radius: 0px !important;
-}
+} */

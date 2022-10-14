@@ -1,12 +1,17 @@
-import React from 'react'
+import React from "react"
+import { useState } from "react"
+import { FaRegThumbsUp,FaRegThumbsDown } from 'react-icons/fa';
 
 function Like() {
-    
-  return (
-    <div>
+  const [count, setCount] = useState(0)
 
-    </div>
-  )
+return (
+<>
+  <p>{count}</p>
+  <FaRegThumbsUp  onClick={() => setCount(count+1)} /> &nbsp;
+  
+  <FaRegThumbsDown  onClick={() => setCount(count-1)} /> &nbsp;
+  </>
+)
 }
-
 export default Like

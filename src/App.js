@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import AddPost from './Components/AddPost';
 import ViewFeed from './Components/ViewFeed';
@@ -8,10 +7,11 @@ function App() {
   return (
     <div className="App">
       <Routes>
+     
       <Route path='/' element={<AddPost />} />
       <Route path='/viewfeed' element = {<ViewFeed />} />
       </Routes>
-  
+ 
   
     </div>
   );
