@@ -4,10 +4,9 @@ import './feeds.css';
 import Like from "./Like";
 import Comment from "./Comment";
 import { FcLike,FcLikePlaceholder } from "react-icons/fc";
-import { BsBoxArrowUp } from "react-icons/bs";
+import { BsBoxArrowUp ,BsHeart} from "react-icons/bs";
 import Searchbar from "./Searchbar";
 function ViewFeed() {
-
 
     const userInfo = JSON.parse(localStorage.getItem('user-info'))
     const comments = JSON.parse(localStorage.getItem('comments'))
@@ -15,13 +14,9 @@ function ViewFeed() {
     const navigater = useNavigate();
     // const dispatch = useDispatch();
     // const response = useSelector((state)=>state?.PostReducer?.Post_Details)
-    
-    // console.log(123123,response)
-
     // useEffect(() => {
     //   dispatch(getPost(response));
     // });
- 
     return (
       <div className="container">
         <Searchbar />
@@ -30,13 +25,16 @@ function ViewFeed() {
                 userInfo.map((item,index)=>(
                   <>
                     <div key={index} className="imgDiv" >
-                        <img src={item.postImage} alt='image' />
+                    <p>{item.postName}</p>
+                        <img src={item.postImage ? item.postImage : "https://images.pexels.com/photos/7961265/pexels-photo-7961265.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"} alt='image' />
                         <p>
-                        {item.postName}
+                      
                         <Like />
-                        <FcLike/>
-                        <FcLikePlaceholder />
-                        <BsBoxArrowUp />
+                        
+                      
+                        
+                        {/* <FcLikePlaceholder /> */}
+                        {/* <BsBoxArrowUp /> */}
                         <Comment id={index} />
                         </p>
                     </div>

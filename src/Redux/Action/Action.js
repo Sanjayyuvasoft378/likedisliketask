@@ -13,10 +13,9 @@ export const add_post = (data) => {
 };
 
 export const getPost = (res) => {
-  return (dispatch) => {
-    dispatch({
+  return  {
       type: GET_POST,
       payload: res,
-    });
+    
   };
 };

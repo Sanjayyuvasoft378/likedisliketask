@@ -1,15 +1,14 @@
 import React from 'react'
+import { useForm } from 'react-hook-form';
 import '../App.css';
-import { GoSearch } from "react-icons/go";
 function Searchbar() {
-    const onsubmit = () =>{
-        
-    }
+  const onSubmit =()=>{
+
+  }
+  const { register, handleSubmit, formState:{errors}} = useForm();
     return (
         
         <div className="main">
-            
-         
           <div className="search">
             <input
               id="outlined-basic"
@@ -17,7 +16,7 @@ function Searchbar() {
             placeholder="Search Here"
              
               label="Search" style={{width: "18rem" }}
-            /><GoSearch style={{marginLeft: "19rem"}}/>
+            />
           </div>
           
         </div>

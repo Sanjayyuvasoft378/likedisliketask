@@ -23,7 +23,6 @@ function Comment(props) {
     reset();
   };
   const showComments = JSON.parse(localStorage.getItem("comments"));
-  
   return (
     <div className="container">
       <Form onSubmit={handleSubmit(onSubmit)}>
