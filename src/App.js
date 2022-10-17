@@ -3,9 +3,12 @@ import AddPost from './Components/AddPost';
 import ViewFeed from './Components/ViewFeed';
 import { Route, Routes } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import '../node_modules/antd/dist/antd.min.css'
+
 function App() {
   return (
     <div className="App">
+
       <Routes>
      
       <Route path='/' element={<AddPost />} />
