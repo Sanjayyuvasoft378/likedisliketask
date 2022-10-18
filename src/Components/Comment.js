@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import "./feeds.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-function Comment(props) {
-  console.log(1234,props)
-  const [count, setCount] = useState();
+function Comment() {
   const {
     register,
     handleSubmit,
@@ -39,23 +37,7 @@ function Comment(props) {
         </Form.Group>
       </Form>
       {showComments}
-      {/* <form className="formWrapper" onSubmit={handleSubmit(onSubmit)}>
-          <div className="row">
-            <div className="col-25">
-              <label htmlFor="fname" >Comment</label>
-            </div>
-            <div className="col-75">
-              <input 
-                {...register("comment", {
-                  required: "enter comment",
-                })}
-              />
-              {errors.comment && <p>comment is required.</p>}
-               <input  id="comment-btn" type="submit" value="Submit" />
-               <div>{showComments}</div>
-            </div>
-          </div>
-        </form> */}
+      
     </div>
   );
 }
