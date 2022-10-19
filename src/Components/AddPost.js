@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { add_post } from "../Redux/Action/Action";
 import "./post.css";
-import TagsInput from "./TagsInput";
 
 function AddPost() {
   const dispatch = useDispatch();
@@ -20,15 +19,6 @@ function AddPost() {
     dispatch(add_post(data));
     navigate("/viewfeed");
   };
-  
-  const [tags, setTags] = React.useState([]);
-  const addTags = (event) => {
-    if (event.key === "Enter" && event.target.value !== "") {
-      setTags([...tags, event.target.value]);
-      event.target.value = "";
-      localStorage.setItem("tag", JSON.stringify(tags));
-    }
-  };
 
   return (
     <div>
@@ -37,7 +27,6 @@ function AddPost() {
         <div class="container">
           <div class="row">
             <div class="col-10">
-              {/* <TagsInput /> */}
               <label for="fname">post Name:</label>
             </div>
             <div class="col-90">
@@ -66,14 +55,7 @@ function AddPost() {
               {errors.postImage && <p>postImage is required.</p>}
             </div>
           </div>
-          <div>
-            <input
-              type="text"
-              onKeyUp={(event) => addTags(event)}
-              placeholder="Press enter to add tags"
-            />
-            {setTags}
-          </div>
+          
           <div class="row">
             <input type="submit" value="Post" />
           </div>
